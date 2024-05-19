@@ -24,6 +24,7 @@
 		22E692B92BFA09CC00C32A2F /* CustomKeyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E692B82BFA09CC00C32A2F /* CustomKeyViewModel.swift */; };
 		22E692BC2BFA0CCD00C32A2F /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E692BB2BFA0CCD00C32A2F /* ColorExtension.swift */; };
 		22E692BE2BFA2DD500C32A2F /* SafariWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E692BD2BFA2DD500C32A2F /* SafariWebView.swift */; };
+		22E692C12BFA325500C32A2F /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 22E692C02BFA325500C32A2F /* KeychainSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22E692C12BFA325500C32A2F /* KeychainSwift in Frameworks */,
 				22A811BC2BD1084F00AFFAC5 /* GoogleGenerativeAI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,6 +181,7 @@
 			name = GeminiAIDemo;
 			packageProductDependencies = (
 				22A811BB2BD1084F00AFFAC5 /* GoogleGenerativeAI */,
+				22E692C02BFA325500C32A2F /* KeychainSwift */,
 			);
 			productName = GeminiAIDemo;
 			productReference = 22A811A52BD1069C00AFFAC5 /* GeminiAIDemo.app */;
@@ -210,6 +213,7 @@
 			mainGroup = 22A8119C2BD1069C00AFFAC5;
 			packageReferences = (
 				22A811BA2BD1084F00AFFAC5 /* XCRemoteSwiftPackageReference "generative-ai-swift" */,
+				22E692BF2BFA325500C32A2F /* XCRemoteSwiftPackageReference "keychain-swift" */,
 			);
 			productRefGroup = 22A811A62BD1069C00AFFAC5 /* Products */;
 			projectDirPath = "";
@@ -466,6 +470,14 @@
 				minimumVersion = 0.4.11;
 			};
 		};
+		22E692BF2BFA325500C32A2F /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:evgenyneu/keychain-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 24.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -473,6 +485,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 22A811BA2BD1084F00AFFAC5 /* XCRemoteSwiftPackageReference "generative-ai-swift" */;
 			productName = GoogleGenerativeAI;
+		};
+		22E692C02BFA325500C32A2F /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 22E692BF2BFA325500C32A2F /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
