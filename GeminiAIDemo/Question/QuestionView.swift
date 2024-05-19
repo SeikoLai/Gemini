@@ -92,9 +92,7 @@ struct QuestionView: View {
                 .font(.caption)
         }
         .background(
-            Image("question-background")
-                .resizable()
-                .scaledToFill()
+            LinearGradient(colors: [Color(hex: "1D976C"), Color(hex: "93F9B9")], startPoint: .topLeading, endPoint: .bottomTrailing)
                 .opacity(0.8)
                 .ignoresSafeArea()
         )

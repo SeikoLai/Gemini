@@ -110,10 +110,7 @@ struct ChatView: View {
             }
         }
         .background(
-            Image("chat-background")
-                .resizable()
-                .scaledToFill()
-                .opacity(0.8)
+            LinearGradient(colors: [Color(hex: "FFE259"), Color(hex: "FFA751")], startPoint: .topLeading, endPoint: .bottomTrailing)
                 .ignoresSafeArea()
         )
     }
