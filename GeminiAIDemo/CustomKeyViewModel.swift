@@ -11,4 +11,5 @@ import Combine
 final class CustomKeyViewModel: ObservableObject {
     
     @Published var APIKey: String = ""
+    @Published var save: Bool = true
 }

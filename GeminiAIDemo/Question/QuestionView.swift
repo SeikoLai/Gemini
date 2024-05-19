@@ -14,12 +14,15 @@ struct QuestionView: View {
     var body: some View {
         VStack {
             Text("Ask question".uppercased())
-                .font(.largeTitle)
+                .font(.system(.largeTitle, design: .monospaced))
                 .bold()
                 .foregroundStyle(.white)
                 .padding(.top)
             
-            TextField(text: $viewModel.prompt, prompt: Text("Enter your question.").foregroundStyle(.black.opacity(0.5)) ) {
+            TextField(text: $viewModel.prompt, prompt: 
+                        Text("Enter your question.")
+                .foregroundStyle(.black.opacity(0.5))
+                .font(.system(.subheadline, design: .monospaced))) {
                 
             }
             .overlay(alignment: .trailing) {
@@ -53,7 +56,7 @@ struct QuestionView: View {
                 Text(viewModel.answer)
                     .foregroundStyle(.white)
                     .padding()
-                    .font(.callout)
+                    .font(.system(.callout, design: .monospaced))
                     .background(.opacity(0.05))
                     .clipShape(RoundedRectangle(cornerRadius: 25.0))
                     .frame(maxHeight: .infinity, alignment: .leading)
@@ -79,7 +82,7 @@ struct QuestionView: View {
                 viewModel.submit()
             }, label: {
                 Label("Submit", systemImage: "paperplane.circle.fill")
-                    .font(.title)
+                    .font(.system(.title, design: .monospaced))
                     .foregroundStyle(.white)
                     .frame(maxWidth: .infinity)
             })
@@ -89,7 +92,7 @@ struct QuestionView: View {
             Text("Token counts: \(TokenCounter.shared.counts)")
                 .frame(maxWidth: .infinity)
                 .foregroundStyle(.white.opacity(0.7))
-                .font(.caption)
+                .font(.system(.footnote, design: .monospaced))
         }
         .background(
             LinearGradient(colors: [Color(hex: "1D976C"), Color(hex: "93F9B9")], startPoint: .topLeading, endPoint: .bottomTrailing)

@@ -20,9 +20,10 @@
 		22A811CD2BD2340D00AFFAC5 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A811CC2BD2340D00AFFAC5 /* ChatViewModel.swift */; };
 		22A811CF2BD2343B00AFFAC5 /* QuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A811CE2BD2343B00AFFAC5 /* QuestionViewModel.swift */; };
 		22B508BE2BD64EF500CCF7F3 /* TokenCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B508BD2BD64EF400CCF7F3 /* TokenCounter.swift */; };
-		22E692B72BFA096100C32A2F /* CustomKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E692B62BFA096100C32A2F /* CustomKey.swift */; };
+		22E692B72BFA096100C32A2F /* CustomKeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E692B62BFA096100C32A2F /* CustomKeyView.swift */; };
 		22E692B92BFA09CC00C32A2F /* CustomKeyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E692B82BFA09CC00C32A2F /* CustomKeyViewModel.swift */; };
 		22E692BC2BFA0CCD00C32A2F /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E692BB2BFA0CCD00C32A2F /* ColorExtension.swift */; };
+		22E692BE2BFA2DD500C32A2F /* SafariWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E692BD2BFA2DD500C32A2F /* SafariWebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,9 +40,10 @@
 		22A811CC2BD2340D00AFFAC5 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		22A811CE2BD2343B00AFFAC5 /* QuestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewModel.swift; sourceTree = "<group>"; };
 		22B508BD2BD64EF400CCF7F3 /* TokenCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenCounter.swift; sourceTree = "<group>"; };
-		22E692B62BFA096100C32A2F /* CustomKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomKey.swift; sourceTree = "<group>"; };
+		22E692B62BFA096100C32A2F /* CustomKeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomKeyView.swift; sourceTree = "<group>"; };
 		22E692B82BFA09CC00C32A2F /* CustomKeyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomKeyViewModel.swift; sourceTree = "<group>"; };
 		22E692BB2BFA0CCD00C32A2F /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		22E692BD2BFA2DD500C32A2F /* SafariWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,9 +78,10 @@
 			isa = PBXGroup;
 			children = (
 				22A811AA2BD1069C00AFFAC5 /* ContentView.swift */,
-				22E692B62BFA096100C32A2F /* CustomKey.swift */,
+				22E692B62BFA096100C32A2F /* CustomKeyView.swift */,
 				22E692B82BFA09CC00C32A2F /* CustomKeyViewModel.swift */,
 				22A811A82BD1069C00AFFAC5 /* GeminiAIDemoApp.swift */,
+				22E692BD2BFA2DD500C32A2F /* SafariWebView.swift */,
 				22A811CB2BD233EF00AFFAC5 /* Assets */,
 				22A811D02BD2345F00AFFAC5 /* Chat */,
 				22B508BF2BD652EC00CCF7F3 /* Models */,
@@ -238,13 +241,14 @@
 				22A811BE2BD11AF300AFFAC5 /* QuestionView.swift in Sources */,
 				22A811CF2BD2343B00AFFAC5 /* QuestionViewModel.swift in Sources */,
 				22A811AB2BD1069C00AFFAC5 /* ContentView.swift in Sources */,
+				22E692BE2BFA2DD500C32A2F /* SafariWebView.swift in Sources */,
 				22E692BC2BFA0CCD00C32A2F /* ColorExtension.swift in Sources */,
 				22B508BE2BD64EF500CCF7F3 /* TokenCounter.swift in Sources */,
 				22E692B92BFA09CC00C32A2F /* CustomKeyViewModel.swift in Sources */,
 				22A811C02BD121F800AFFAC5 /* ChatView.swift in Sources */,
 				22A811B92BD1081700AFFAC5 /* APIKey.swift in Sources */,
 				22A811CD2BD2340D00AFFAC5 /* ChatViewModel.swift in Sources */,
-				22E692B72BFA096100C32A2F /* CustomKey.swift in Sources */,
+				22E692B72BFA096100C32A2F /* CustomKeyView.swift in Sources */,
 				229A94C32BD61C20006BDDC1 /* AnimatableDotsView.swift in Sources */,
 				22A811A92BD1069C00AFFAC5 /* GeminiAIDemoApp.swift in Sources */,
 			);

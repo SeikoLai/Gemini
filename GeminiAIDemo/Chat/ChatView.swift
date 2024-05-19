@@ -17,7 +17,7 @@ struct ChatView: View {
                 .ignoresSafeArea()
             VStack {
                 Text("chat".uppercased())
-                    .font(.largeTitle)
+                    .font(.system(.largeTitle, design: .monospaced))
                     .bold()
                     .foregroundStyle(.white)
                     .padding(.top)
@@ -69,7 +69,10 @@ struct ChatView: View {
                 
                 VStack {
                     HStack {
-                        TextField(text: $viewModel.message, prompt: Text("What's news").foregroundStyle(.black.opacity(0.6))) {
+                        TextField(text: $viewModel.message, prompt: 
+                                    Text("What's news")
+                            .foregroundStyle(.black.opacity(0.6))
+                            .font(.system(.subheadline, design: .monospaced))) {
                             
                         }
                         .keyboardType(.twitter)
@@ -105,7 +108,7 @@ struct ChatView: View {
                     Text("Token counts: \(TokenCounter.shared.counts)")
                         .frame(maxWidth: .infinity)
                         .foregroundStyle(.white.opacity(0.7))
-                        .font(.caption)
+                        .font(.system(.footnote, design: .monospaced))
                 }
             }
         }
