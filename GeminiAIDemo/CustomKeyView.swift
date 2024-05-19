@@ -36,6 +36,7 @@ struct CustomKeyView: View {
                         .background(.white)
                     
                     Toggle("Safely saved to your keychain for next time".capitalized, isOn: $viewModel.save)
+                        .disabled(viewModel.APIKey.isEmpty)
                         .font(.system(.subheadline, design: .monospaced))
                         .multilineTextAlignment(.trailing)
                         .foregroundStyle(Color(.white))
