@@ -14,6 +14,7 @@ final class CustomKeyViewModel: ObservableObject {
     @Published var APIKey: String = ""
     @Published var save: Bool = true
     
+    private let prefixKey: String = "GeminiAI-APIKey-"
     private var cancellable: Set<AnyCancellable> = Set<AnyCancellable>()
     
     init() {
@@ -23,9 +24,9 @@ final class CustomKeyViewModel: ObservableObject {
                  let keychain = KeychainSwift()
                  
                  if isSave {
-                     keychain.set(self.APIKey, forKey: "GeminiAI-APIKey-\(self.APIKey)")
+                     keychain.set(self.APIKey, forKey: "\(self.prefixKey)\(self.APIKey)")
                  } else {
-                     keychain.delete("GeminiAI-APIKey-\(self.APIKey)")
+                     keychain.delete("\(self.prefixKey)\(self.APIKey)")
                  }
              }
              .store(in: &cancellable)
