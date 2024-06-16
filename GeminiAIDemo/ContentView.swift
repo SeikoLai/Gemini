@@ -22,10 +22,11 @@ struct ContentView: View {
     @StateObject var question: QuestionViewModel = QuestionViewModel()
     @StateObject var chat: ChatViewModel = ChatViewModel()
     
+    @State private var isPresentedNeedKey: Bool = true
     var body: some View {
         ZStack {
-            if viewModel.APIKey.isEmpty {
-                CustomKeyView()
+            if isPresentedNeedKey {
+                CustomKeyView(isPresented: $isPresentedNeedKey )
                     .environmentObject(viewModel)
             } else {
                 ZStack {

@@ -10,6 +10,8 @@ import SwiftUI
 struct CustomKeyView: View {
     @EnvironmentObject var viewModel: CustomKeyViewModel
     
+    @Binding var isPresented: Bool
+    
     var body: some View {
 
         NavigationStack {
@@ -43,6 +45,13 @@ struct CustomKeyView: View {
                         .padding()
                     
                     Spacer()
+                    
+                    Button("Start") {
+                        isPresented.toggle()
+                    }
+                    .tint(.white)
+                    .font(.system(.title, design: .monospaced))
+                    .disabled(viewModel.APIKey.isEmpty)
                 }
             }
             .ignoresSafeArea(.keyboard)
@@ -52,7 +61,7 @@ struct CustomKeyView: View {
 #if DEBUG
 struct EnterKeyView_Previews: PreviewProvider {
     static var previews: some View {
-        CustomKeyView()
+        CustomKeyView(isPresented: .constant(true))
             .environmentObject(CustomKeyViewModel())
     }
 }

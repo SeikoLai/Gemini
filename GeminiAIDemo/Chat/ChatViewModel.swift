@@ -48,7 +48,7 @@ class ChatViewModel: ObservableObject {
     }
 }
 
-extension ModelContent: Identifiable {
+extension ModelContent: @retroactive Identifiable {
     public var id: UUID {
         return UUID()
     }
